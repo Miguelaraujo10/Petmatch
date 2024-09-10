@@ -89,3 +89,28 @@ body {
     color: #555;
     font-weight: 400;
 }
+
+/* Estilização do botão "Voltar" */
+.back-button {
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+.back-button button {
+    background-color: #D496A7;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Sora', sans-serif;
+    text-decoration: none;
+}
+
+.back-button button:hover {
+    background-color: #c38492;
+}
+
