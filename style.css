@@ -59,7 +59,7 @@ body {
     font-weight: 400;
 }
 
-/* Restante do CSS */
+/* Estilo da seção principal */
 .main {
     flex: 1;
     padding: 30px;
@@ -73,6 +73,8 @@ body {
 }
 
 .buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões na página */
     margin-top: 20px;
 }
 
@@ -84,10 +86,19 @@ body {
     border-radius: 25px;
     text-decoration: none;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
     display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
+.button:hover {
+    background-color: #c38492; /* Muda a cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo da seção de pets */
 .pets-section {
     display: flex;
     justify-content: space-around;
@@ -114,6 +125,7 @@ body {
     font-weight: 600;
 }
 
+/* Estilo do rodapé */
 .footer {
     background-color: #D496A7;
     padding: 20px;
@@ -121,6 +133,7 @@ body {
     color: #555;
     font-weight: 400;
 }
+
 .back-button button {
     background-color: #D496A7; /* Cor de fundo */
     color: white; /* Cor do texto */
@@ -143,8 +156,3 @@ body {
     justify-content: flex-start; /* Alinha o botão à esquerda */
     margin: 20px;
 }
-
-
-
-
-
