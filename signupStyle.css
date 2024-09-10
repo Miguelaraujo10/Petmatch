@@ -1,0 +1,129 @@
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: #f5d0d7;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #d08b96;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo-and-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo-and-title h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #888;
+    font-size: 18px;
+    margin-right: auto;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #555; /* Efeito hover para o botão de voltar */
+}
+
+.signup-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.signup-container h2 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #D496A7; /* Muda a borda quando o input está focado */
+    outline: none;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-btn {
+    background-color: #D496A7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #c38492;
+    transform: scale(1.05); /* Pequeno efeito de aumento ao passar o mouse */
+}
+
+.already-account {
+    font-size: 16px;
+    color: #666;
+}
+
+.login-link {
+    color: #D496A7;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.login-link:hover {
+    color: #c38492; /* Efeito hover no link de login */
+}
+
+.message {
+    font-size: 14px;
+    color: green;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #D496A7;
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-weight: 400;
+}

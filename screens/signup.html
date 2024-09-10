@@ -11,27 +11,35 @@
 
     <div class="header">
         <div class="logo-and-title">
-            <a href="index.html" class="back-link">VOLTAR</a>
+            <a href="index.html">
+                <img src="../imgs/Design sem nome.svg" alt="Logo">
+            </a>
             <h1>Petmatch</h1>
         </div>
     </div>
 
-    <div class="signup-container">
-        <h2>Criar Conta</h2>
+    <div class="login-container">
+        <div class="login-icon">
+            <img src="../imgs/icone Login.svg" alt="User Icon">
+        </div>
+        
+        <div class="signup-container">
+            <h2>Criar Conta</h2>
 
-        <form id="signupForm">
-            <div class="input-group">
-                <input type="text" placeholder="User" name="username" id="signupUsername" required>
-            </div>
-            <div class="input-group">
-                <input type="password" placeholder="Password" name="password" id="signupPassword" required>
-            </div>
-            <div class="login-buttons">
-                <button type="submit" class="signup-btn">Criar Conta</button>
-            </div>
-        </form>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" placeholder="User" name="username" id="signupUsername" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" name="password" id="signupPassword" required>
+                </div>
+                <div class="login-buttons">
+                    <button type="submit" class="signup-btn">Criar Conta</button>
+                </div>
+            </form>
 
-        <p id="signupMessage" style="color:green;"></p>
+            <p id="signupMessage" style="color:green;"></p>
+        </div>
     </div>
 
     <script src="../src/signup.js"></script>
