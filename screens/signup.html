@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - PetMatch</title>
+    <title>Criar Conta - PetMatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -16,29 +16,25 @@
         </div>
     </div>
 
-    <div class="login-container">
-        <div class="login-icon">
-            <img src="./icone_login.svg" alt="User Icon">
-        </div>
-        
-        <form id="loginForm">
+    <div class="signup-container">
+        <h2>Criar Conta</h2>
+
+        <form id="signupForm">
             <div class="input-group">
-                <input type="text" placeholder="User" name="username" id="username" required>
+                <input type="text" placeholder="User" name="username" id="signupUsername" required>
             </div>
             <div class="input-group">
-                <input type="password" placeholder="Password" name="password" id="password" required>
+                <input type="password" placeholder="Password" name="password" id="signupPassword" required>
             </div>
             <div class="login-buttons">
-                <button type="submit" class="login-btn">ENTRAR</button>
-                <a href="signup.html" class="signup-btn">Criar Conta</a>
+                <button type="submit" class="signup-btn">Criar Conta</button>
             </div>
         </form>
 
-        <!-- Mensagem de erro ou sucesso -->
-        <p id="message" style="color:red;"></p>
+        <p id="signupMessage" style="color:green;"></p>
     </div>
 
-    <script src="../src/login.js"></script>
+    <script src="../src/signup.js"></script>
 
 </body>
 <footer>
