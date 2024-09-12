@@ -14,8 +14,9 @@
             <img src="../imgs/Design sem nome.svg" alt="Logo">
             <h1>PetMatch</h1>
         </div>
-        <div class="login-section">
-            <a href="./login.html" class="login-link">
+        <div class="login-section" id="loginSection">
+            <!-- Essa parte será dinamicamente alterada pelo JavaScript -->
+            <a href="./login.html" class="login-link" id="loginLink">
                 <img src="../imgs/icone Login.svg" alt="Login">
                 <span>Sign-in/Login</span>
             </a>
@@ -32,7 +33,6 @@
         </div>
 
         <div class="pets-section">
-
             <a href="./dogscard.html">
                 <div class="pet-card">
                     <img src="../imgs/DALL·E 2024-09-09 14.13.51 - A symbolic representation of a dog that combines features from various breeds. The dog should appear friendly, with a neutral yet vibrant design, feat.webp" alt="Pet">
@@ -51,7 +51,6 @@
                     <h3>Adote uma ave</h3>
                 </div>
             </a>
-            
         </div>
     </div>
 
@@ -61,4 +60,19 @@
         <p>&copy; 2024 PetMatch. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const storedUsername = localStorage.getItem("username");
+        const storedPassword = localStorage.getItem("password");
+
+        const loginSection = document.getElementById("loginSection");
+
+        if (storedUsername && storedPassword) {
+            // Usuário já está logado, substitui a parte de login
+            loginSection.innerHTML = '<span class="logged-in-message">Já está logado</span>';
+        }
+    });
+</script>
+
 </html>

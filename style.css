@@ -204,3 +204,8 @@ button[type="submit"]:hover {
     color: #333;
     font-weight: 600;
 }
+.logged-in-message {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
