@@ -19,7 +19,21 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Aqui você pode adicionar a lógica para salvar os dados do pet
+        // Recupera os pets existentes do localStorage ou cria um novo array
+        const pets = JSON.parse(localStorage.getItem("pets")) || [];
+
+        // Adiciona o novo pet ao array
+        pets.push({
+            name: petName,
+            age: petAge,
+            type: petType,
+            image: URL.createObjectURL(petImage), // Para visualizar a imagem
+            owner: loggedInUser // Salva o dono do pet
+        });
+
+        // Salva o array de pets atualizado no localStorage
+        localStorage.setItem("pets", JSON.stringify(pets));
+
         document.getElementById("message").innerText = "Pet cadastrado com sucesso!";
     });
 });
