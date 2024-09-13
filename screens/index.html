@@ -15,10 +15,9 @@
             <h1>PetMatch</h1>
         </div>
         <div class="login-section" id="loginSection">
-            <!-- Essa parte será dinamicamente alterada pelo JavaScript -->
             <a href="./login.html" class="login-link" id="loginLink">
-                <img src="../imgs/icone Login.svg" alt="Login">
-                <span>Sign-in/Login</span>
+                <img src="../imgs/icone Login.svg" alt="Login" id="loginIcon">
+                <span id="loginText">Sign-in/Login</span>
             </a>
         </div>
     </div>
@@ -66,11 +65,9 @@
         const storedUsername = localStorage.getItem("username");
         const storedPassword = localStorage.getItem("password");
 
-        const loginSection = document.getElementById("loginSection");
-
         if (storedUsername && storedPassword) {
-            // Usuário já está logado, substitui a parte de login
-            loginSection.innerHTML = '<span class="logged-in-message">Já está logado</span>';
+            // Usuário já está logado, muda o texto do login para "Já está logado"
+            document.getElementById("loginText").innerText = "Já está logado";
         }
     });
 </script>
