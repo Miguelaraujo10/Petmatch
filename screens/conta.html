@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - PetMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../contaStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-and-title">
+            <img src="../imgs/Design sem nome.svg" alt="Logo">
+            <h1>PetMatch</h1>
+        </div>
+        <div class="login-section">
+            <span class="logged-in-message">Você está logado</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="back-button">
+            <button onclick="window.history.back()">&#8592; Voltar</button>
+        </div>
+        <h2>Configurações da Conta</h2>
+        <p>Aqui você pode gerenciar suas informações pessoais e os dados dos seus pets.</p>
+        
+        <div class="buttons">
+            <button class="button" onclick="mostrarSecao('configPessoal')">Configurações Pessoais</button>
+            <button class="button" onclick="mostrarSecao('dadosPet')">Dados do Pet</button>
+        </div>
+
+        <!-- Seção de Configurações Pessoais -->
+        <div id="configPessoal" class="conteudo-secao" style="display: none;">
+            <h3>Configurações Pessoais</h3>
+            <p>Aqui você pode atualizar suas informações pessoais, como nome, e-mail e senha.</p>
+            <!-- Formulário fictício de exemplo -->
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <button type="submit" class="button">Salvar</button>
+        </div>
+
+        <!-- Seção de Dados do Pet -->
+        <div id="dadosPet" class="conteudo-secao" style="display: none;">
+            <h3>Dados do Pet</h3>
+            <p>Aqui você pode atualizar os dados do seu pet, como nome, idade e tipo de animal.</p>
+            <!-- Formulário fictício de exemplo -->
+            <div class="form-group">
+                <label for="nomePet">Nome do Pet:</label>
+                <input type="text" id="nomePet" name="nomePet">
+            </div>
+            <div class="form-group">
+                <label for="idadePet">Idade do Pet:</label>
+                <input type="number" id="idadePet" name="idadePet">
+            </div>
+            <div class="form-group">
+                <label for="tipoPet">Tipo de Pet:</label>
+                <select id="tipoPet" name="tipoPet">
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="ave">Ave</option>
+                </select>
+            </div>
+            <button type="submit" class="button">Salvar</button>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <div class="footer">
+        <p>&copy; 2024 PetMatch. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function mostrarSecao(secaoId) {
+        // Esconde todas as seções
+        const secoes = document.querySelectorAll('.conteudo-secao');
+        secoes.forEach(secao => secao.style.display = 'none');
+        
+        // Mostra a seção selecionada
+        const secao = document.getElementById(secaoId);
+        secao.style.display = 'block';
+    }
+</script>
+
+</html>

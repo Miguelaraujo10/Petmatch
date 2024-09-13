@@ -66,8 +66,9 @@
         const storedPassword = localStorage.getItem("password");
 
         if (storedUsername && storedPassword) {
-            // Usuário já está logado, muda o texto do login para "Já está logado"
+            // Usuário já está logado, muda o texto do login para "Já está logado" e o link para "conta.html"
             document.getElementById("loginText").innerText = "Já está logado";
+            document.getElementById("loginLink").setAttribute("href", "conta.html");
         }
     });
 </script>
