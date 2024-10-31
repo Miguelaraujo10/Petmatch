@@ -218,3 +218,15 @@ button[type="submit"]:hover {
     color: white;
     font-weight: 600;
 }
+
+@media (max-width: 900px) {
+    .pets-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pets-section {
+        grid-template-columns: 1fr;
+    }
+}
