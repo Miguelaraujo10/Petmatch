@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
     <div class="header">
         <div class="logo">
             <img src="../imgs/Design sem nome.svg" alt="Logo">
@@ -16,7 +15,6 @@
         <h1>PetMatch</h1>
     </div>
 
-    <!-- Botão de Voltar -->
     <div class="back-button">
         <button onclick="window.history.back()">&#8592; Voltar</button>
     </div>
@@ -24,46 +22,23 @@
     <div class="main">
         <h2>Adote um Cachorro</h2>
         <p>Escolha o seu novo amigo canino e dê a ele um novo lar!</p>
-
-        <div class="pets-section">
-
-            <div class="pet-card">
-                <img src="../imgs/DALL·E 2024-09-10 13.10.58 - A realistic golden retriever sitting in a park, surrounded by green grass and trees. The dog looks calm and friendly, with sunlight illuminating its f.webp" alt="Cachorro">
-                <h3>Rex</h3>
-                <p>2 anos</p>
-                <a href="#" class="button">Adote</a>
-            </div>
-
-            <div class="pet-card">
-                <img src="../imgs/DALL·E 2024-09-10 13.11.00 - A realistic black labrador sitting in a park, surrounded by green grass and trees. The dog looks calm and friendly, with sunlight illuminating its fur.webp" alt="Cachorro">
-                <h3>Max</h3>
-                <p>3 anos</p>
-                <a href="#" class="button">Adote</a>
-            </div>
-
-            <div class="pet-card">
-                <img src="../imgs/DALL·E 2024-09-10 13.11.07 - A realistic brown chihuahua sitting in a park, surrounded by green grass and trees. The dog looks calm and friendly, with sunlight illuminating its fu.webp" alt="Cachorro">
-                <h3>Luna</h3>
-                <p>1 ano</p>
-                <a href="#" class="button">Adote</a>
-            </div>
-
-            <div class="pet-card">
-                <img src="../imgs/DALL·E 2024-09-10 13.11.10 - A realistic fluffy white poodle sitting in a park, surrounded by green grass and trees. The dog looks calm and friendly, with sunlight illuminating it.webp" alt="Cachorro">
-                <h3>Bella</h3>
-                <p>4 anos</p>
-                <a href="#" class="button">Adote</a>
-            </div>
-            
-            <!-- Adicione mais cards de cachorro conforme necessário -->
-            
+        <div class="pets-section" id="pets-section">
         </div>
     </div>
 
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 PetMatch. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../src/dados.js"></script>
+    <script src="../src/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderizarCachorros();
+        });
+    </script>
 </body>
-<footer>
-    <div class="footer">
-        <p>&copy; 2024 PetMatch. All rights reserved.</p>
-    </div>
-</footer>
+</body>
+
 </html>
