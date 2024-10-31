@@ -8,5 +8,5 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
 
-    document.getElementById("signupMessage").innerText = "Conta criada com sucesso! Você pode fazer login agora.";
+    document.getElementById("signupMessage").innerText = "Conta criada com sucesso!";
 });
