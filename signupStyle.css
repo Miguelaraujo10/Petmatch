@@ -81,6 +81,15 @@ body {
     align-items: center;
 }
 
+#signupMessage {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    min-height: 20px; /* Define uma altura mínima para evitar deslocamento */
+    margin-top: 10px;
+}
+
+
 .signup-btn {
     background-color: #D496A7;
     color: white;
@@ -127,3 +136,4 @@ body {
     color: #555;
     font-weight: 400;
 }
+

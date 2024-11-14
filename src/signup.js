@@ -4,9 +4,28 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     const username = document.getElementById("signupUsername").value;
     const password = document.getElementById("signupPassword").value;
 
-    // Armazenando os dados no localStorage
-    localStorage.setItem("username", username);
-    localStorage.setItem("password", password);
+    // Verifica se o nome de usuário já existe
+    const existingUsername = localStorage.getItem("username");
 
-    document.getElementById("signupMessage").innerText = "Conta criada com sucesso! Você pode fazer login agora.";
+    if (existingUsername === username) {
+        // Exibe uma mensagem de erro se o usuário já existir
+        document.getElementById("signupMessage").innerText = "Este nome de usuário já está em uso.";
+        document.getElementById("signupMessage").style.color = "red";
+    } else {
+        // Armazena os dados de credenciais no localStorage
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password);
+
+        // Define a sessão como ativa
+        localStorage.setItem("isLoggedIn", "true");
+
+        // Exibe a mensagem de sucesso
+        document.getElementById("signupMessage").innerText = "Conta criada com sucesso!";
+        document.getElementById("signupMessage").style.color = "green";
+
+        // Redireciona para a página index.html após 2 segundos
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 2000);
+    }
 });

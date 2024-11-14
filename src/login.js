@@ -1,18 +1,28 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Previne o envio padrão do formulário
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
 
-    // Verificar se os dados estão armazenados no localStorage
+    // Recupera as credenciais armazenadas
     const storedUsername = localStorage.getItem("username");
     const storedPassword = localStorage.getItem("password");
 
+    // Verifica se as credenciais estão corretas
     if (username === storedUsername && password === storedPassword) {
-        // Redireciona para a página inicial se a conta existir
-        window.location.href = "index.html";
+        // Define a sessão como ativa
+        localStorage.setItem("isLoggedIn", "true");
+
+        // Exibe a mensagem de sucesso
+        document.getElementById("loginMessage").innerText = "Login aprovado!";
+        document.getElementById("loginMessage").style.color = "green";
+
+        // Redireciona para a página index.html após 2 segundos
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 2000);
     } else {
-        // Se a conta não existir, exibe uma mensagem de erro
-        document.getElementById("message").innerText = "Conta não encontrada. Por favor, crie uma conta.";
+        document.getElementById("loginMessage").innerText = "Usuário ou senha incorretos.";
+        document.getElementById("loginMessage").style.color = "red";
     }
 });
