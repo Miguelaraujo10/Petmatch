@@ -15,10 +15,17 @@
             <h1>PetMatch</h1>
         </div>
         <div class="login-section" id="loginSection">
-            <a href="./login.html" class="login-link" id="loginLink">
+            <!-- Link de login redirecionando para signup.html -->
+            <a href="./signup.html" class="login-link" id="loginLink">
                 <img src="../imgs/icone Login.svg" alt="Login" id="loginIcon">
                 <span id="loginText">Sign-in/Login</span>
             </a>
+            <!-- Botão de perfil para conta.html, exibido apenas se o usuário estiver logado -->
+            <a href="conta.html" id="userProfile" class="user-profile" style="display: none;">
+                <img src="../imgs/icone Login.svg" alt="User Icon">
+            </a>
+            <!-- Botão de logout, inicialmente escondido -->
+            <button id="logoutButton" class="logout-btn" style="display: none;">Sair da conta</button>
         </div>
     </div>
 
@@ -31,46 +38,32 @@
             <a href="cadastrar.html" class="button">Cadastrar PET</a>
         </div>
 
-        <div class="pets-section">
-            <a href="./dogscard.html">
-                <div class="pet-card">
-                    <img src="../imgs/DALL·E 2024-09-09 14.13.51 - A symbolic representation of a dog that combines features from various breeds. The dog should appear friendly, with a neutral yet vibrant design, feat.webp" alt="Pet">
-                    <h3>Adote um cachorro</h3>
-                </div>
-            </a>
-            <a href="#">
-                <div class="pet-card">
-                    <img src="../imgs/DALL·E 2024-09-09 14.13.52 - A symbolic representation of a cat that combines features from various breeds. The cat should appear friendly, with a sleek design, featuring characte.webp" alt="Pet">
-                    <h3>Adote um gato</h3>
-                </div>
-            </a>
-            <a href="#">
-                <div class="pet-card">
-                    <img src="../imgs/DALL·E 2024-09-09 14.12.46 - A symbolic bird that represents all types of birds in a single image. The bird should be elegant and neutral, combining features from various species .webp" alt="Pet">
-                    <h3>Adote uma ave</h3>
-                </div>
-            </a>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 PetMatch. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 
+    <script src="../src/logout.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+            // Verifica se o usuário está logado
+            if (isLoggedIn === "true") {
+                // Oculta o link de login e exibe o botão de logout e o botão de perfil
+                document.getElementById("loginLink").style.display = "none";
+                document.getElementById("logoutButton").style.display = "block";
+                document.getElementById("userProfile").style.display = "block";
+            } else {
+                // Exibe o link de login e oculta os botões de logout e perfil
+                document.getElementById("loginLink").style.display = "block";
+                document.getElementById("logoutButton").style.display = "none";
+                document.getElementById("userProfile").style.display = "none";
+            }
+        });
+    </script>
 </body>
-<footer>
-    <div class="footer">
-        <p>&copy; 2024 PetMatch. All rights reserved.</p>
-    </div>
-</footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const storedUsername = localStorage.getItem("username");
-        const storedPassword = localStorage.getItem("password");
-
-        if (storedUsername && storedPassword) {
-            // Usuário já está logado, muda o texto do login para "Já está logado" e o link para "conta.html"
-            document.getElementById("loginText").innerText = "Já está logado";
-            document.getElementById("loginLink").setAttribute("href", "conta.html");
-        }
-    });
-</script>
-
 </html>

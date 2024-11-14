@@ -26,23 +26,23 @@
             <h2>Criar Conta</h2> 
         </div>
         
-        
         <div class="signup-container">
-           
-              
             <form id="signupForm">
+                <div class="input-group">
+                    <input type="email" placeholder="Email" name="username" id="signupUsername" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Senha" name="password" id="signupPassword" required
+                           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                           title="A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.">
+                </div>
                 
-                <div class="input-group">
-                    <input type="text" placeholder="User" name="username" id="signupUsername" required>
-                </div>
-                <div class="input-group">
-                    <input type="password" placeholder="Password" name="password" id="signupPassword" required>
-                </div>
                 <div class="login-buttons">
                     <button type="submit" class="signup-btn">Criar Conta</button>
                 </div>
+                <p></p>
                 <div class="login-buttons">
-                    <a href="./login.html"><button type="onClick" class="signup-btn">Logar</button></a>
+                    <a href="./login.html"><button type="button" class="signup-btn">Logar</button></a>
                 </div>
             </form>
 

@@ -11,10 +11,10 @@
 
     <div class="header">
         <div class="logo-and-title">
-            <a href="./index.html">
-                <img src="../imgs/Design sem nome.svg" alt="">
+            <a href="index.html">
+                <img src="../imgs/Design sem nome.svg" alt="Logo">
             </a>
-            <h1>Petmatch</h1>
+            <h1>PetMatch</h1>
         </div>
     </div>
 
@@ -22,22 +22,24 @@
         <div class="login-icon">
             <img src="../imgs/icone Login.svg" alt="User Icon">
         </div>
-        
-        <form id="loginForm">
-            <div class="input-group">
-                <input type="text" placeholder="User" name="username" id="username" required>
-            </div>
-            <div class="input-group">
-                <input type="password" placeholder="Password" name="password" id="password" required>
-            </div>
-            <div class="login-buttons">
-                <button type="submit" class="login-btn">ENTRAR</button>
-                <a href="signup.html" class="signup-btn">Criar Conta</a>
-            </div>
-        </form>
+        <div id="loginSection">
+            <h2>Login</h2> 
+        </div>
 
-        <!-- Mensagem de erro ou sucesso -->
-        <p id="message" style="color:red;"></p>
+        <div class="login-form-container">
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" placeholder="User" name="username" id="loginUsername" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" name="password" id="loginPassword" required>
+                </div>
+                <div class="login-buttons">
+                    <button type="submit" class="login-btn">Login</button>
+                </div>
+            </form>
+            <p id="loginMessage" style="color:green;"></p> <!-- Mensagem de sucesso ou erro -->
+        </div>
     </div>
 
     <script src="../src/login.js"></script>
