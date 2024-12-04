@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "login.html"; // Redirecionar para a página de login
     }
 
+    // biome-ignore lint/complexity/useArrowFunction: <explanation>
     document.getElementById("petForm").addEventListener("submit", function(event) {
         event.preventDefault();
 

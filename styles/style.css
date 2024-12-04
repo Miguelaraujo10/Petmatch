@@ -59,48 +59,48 @@ body {
     font-weight: 400;
 }
 
-/* Estilo da seção principal */
-.main {
-    flex: 1;
-    padding: 30px;
-    text-align: center;
-}
+    /* Estilo da seção principal */
+    .main {
+        flex: 1;
+        padding: 30px;
+        text-align: center;
+    }
 
-.main h2 {
-    font-size: 28px;
-    color: #333;
-    font-weight: 600;
-}
+    .main h2 {
+        font-size: 28px;
+        color: #333;
+        font-weight: 600;
+    }
 
-#desc {
-    padding-bottom: 80px;
-}
+    #desc {
+        padding-bottom: 80px;
+    }
 
-.buttons {
-    display: flex;
-    justify-content: center; /* Centraliza os botões na página */
-    margin-top: 20px;
-}
+    .buttons {
+        display: flex;
+        justify-content: center; /* Centraliza os botões na página */
+        margin-top: 20px;
+    }
 
-.button {
-    background-color: #D496A7;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .button {
+        background-color: #D496A7;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s, transform 0.3s;
+        margin-top: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-.button:hover {
-    background-color: #c38492;
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
+    .button:hover {
+        background-color: #c38492;
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
 
 
 /* Estilo da seção de pets */
