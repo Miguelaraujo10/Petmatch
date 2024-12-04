@@ -18,11 +18,13 @@ body {
     align-items: center;
     justify-content: space-between;
     color: white;
+    flex-wrap: wrap; /* Permite que o cabeçalho se ajuste em telas menores */
 }
 
 .logo-and-title {
     display: flex;
     align-items: center;
+    flex: 1;
 }
 
 .logo-and-title img {
@@ -84,10 +86,8 @@ body {
 }
 
 /* Estilo do formulário */
-.form-group, .form-group-menor, .form-group-menor-idade  {
+.form-group, .form-group-menor, .form-group-menor-idade {
     margin: 30px;
-
-
 }
 
 .form-group label {
@@ -104,23 +104,20 @@ body {
     border: 1px solid #ccc;
     font-size: 16px;
     background-color: #f5d0d7;
-
 }
 
-
-.form-group-menor-idade{
+.form-group-menor-idade {
     text-align: start;
     width: 48%;
     border-radius: 5px;
     font-size: 16px;
-
 }
-.form-group-menor{
+
+.form-group-menor {
     text-align: start;
     width: 50%;
     border-radius: 5px;
     font-size: 16px;
-
 }
 
 .form-group-menor label, .form-group-menor-idade label {
@@ -138,7 +135,6 @@ body {
     font-size: 16px;
     background-color: #f5d0d7;
 }
-
 
 /* Estilo do botão */
 button[type="submit"] {
@@ -160,27 +156,6 @@ button[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-
-/* Estilo do botão de submit */
-button[type="submit"] {
-    width:30%;
-    background-color: #D496A7;
-    color: white;
-    padding: 15px;
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px; /* Adiciona espaço entre os campos e o botão */
-}
-
-button[type="submit"]:hover {
-    background-color: #c38492;
-    transform: scale(1.05);
-}
-
 /* Estilo do rodapé */
 .footer {
     background-color: #D496A7;
@@ -194,23 +169,62 @@ button[type="submit"]:hover {
 /* Responsividade para telas menores */
 @media (max-width: 900px) {
     .main {
-        width: 90%; /* Deixa o formulário um pouco maior em telas menores */
-    }
-
-    button[type="submit"] {
-        font-size: 16px;
-        padding: 12px;
-    }
-}
-
-@media (max-width: 600px) {
-    .main {
-        width: 100%; /* Formulário ocupa toda a largura da tela */
+        width: 80%; /* Ajusta o formulário para maior largura em telas menores */
         padding: 20px;
     }
 
     button[type="submit"] {
         font-size: 16px;
         padding: 12px;
+        width: 80%; /* Botão ocupa 80% da largura */
+    }
+
+    .logo-and-title h1 {
+        font-size: 28px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .back-button {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        width: 90%; /* Formulário ocupa quase toda a largura da tela */
+        padding: 15px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 12px;
+        width: 90%; /* Botão ocupa 90% da largura */
+        margin-top: 20px;
+    }
+
+    .logo-and-title h1 {
+        font-size: 24px;
+    }
+
+    .header {
+        flex-direction: column; /* Permite que os itens do cabeçalho fiquem em coluna */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .back-button {
+        justify-content: center;
+    }
+
+    /* Ajustes adicionais para os campos do formulário em telas muito pequenas */
+    .form-group, .form-group-menor, .form-group-menor-idade {
+        margin: 15px 0;
+    }
+
+    .form-group input, .form-group select, .form-group-menor input, .form-group-menor select {
+        width: 90%;
     }
 }

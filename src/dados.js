@@ -1,4 +1,4 @@
-[
+const cachorros = [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_3716470301.jpg",
       "nome": "Max",
@@ -62,7 +62,10 @@
       "idade": "1 ano",
       "sexo": "Fêmea",
       "descrição": "Pequena e enérgica."
-    },
+    }
+  ];
+
+  [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
       "nome": "Jack",
@@ -150,6 +153,7 @@
       "idade": "4 anos",
       "sexo": "Macho",
       "descrição": "Tranquilo e leal."
+    // biome-ignore lint/style/noCommaOperator: <explanation>
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2017/03/Galeria-Border-Collie-6.jpg",
@@ -159,5 +163,5 @@
       "sexo": "Fêmea",
       "descrição": "Inteligente e ágil."
     }
-  ]
+  ];
   

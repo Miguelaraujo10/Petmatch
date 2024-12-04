@@ -103,3 +103,23 @@ body {
     color: #555;
     font-weight: 400;
 }
+
+@media (max-width: 1200px) {
+   
+    .footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+}
+.footer {
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+
+    .footer {
+        font-size: 12px;
+    }
+}
+
