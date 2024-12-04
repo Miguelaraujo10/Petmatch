@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - PetMatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../loginStyle.css">
+    <link rel="stylesheet" href="..//styles/loginStyle.css">
 </head>
 <body>
 
@@ -29,13 +29,16 @@
         <div class="login-form-container">
             <form id="loginForm">
                 <div class="input-group">
-                    <input type="text" placeholder="User" name="username" id="loginUsername" required>
+                    <input type="text" placeholder="Email" name="username" id="loginUsername" required>
                 </div>
                 <div class="input-group">
-                    <input type="password" placeholder="Password" name="password" id="loginPassword" required>
+                    <input type="password" placeholder="Senha" name="password" id="loginPassword" required>
                 </div>
                 <div class="login-buttons">
-                    <button type="submit" class="login-btn">Login</button>
+                    <button type="submit" class="login-btn">Entrar</button>
+                </div>
+                <div class="login-buttons">
+                    <button type="submit" class="signup-btn">Criar Conta</button>
                 </div>
             </form>
             <p id="loginMessage" style="color:green;"></p> <!-- Mensagem de sucesso ou erro -->
