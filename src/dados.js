@@ -65,7 +65,7 @@ const cachorros = [
     }
   ];
 
-  [
+  cachorrosMatch = [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
       "nome": "Jack",
@@ -129,7 +129,9 @@ const cachorros = [
       "idade": "3 anos",
       "sexo": "Fêmea",
       "descrição": "Afetuosa e brincalhona."
-    },
+    }
+  ];
+  [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_407968177.jpg",
       "nome": "Tucker",
