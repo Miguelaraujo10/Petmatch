@@ -65,7 +65,7 @@ const cachorros = [
     }
   ];
 
-  cachorrosMatch = [
+  const cachorrosMatch = [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
       "nome": "Jack",
@@ -132,7 +132,7 @@ const cachorros = [
     }
   ];
 
- seusPets = [
+ const seusPets = [
   
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_407968177.jpg",
@@ -168,3 +168,29 @@ const cachorros = [
     }
   ];
   
+  const petsFavoritos = [
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2016/10/shutterstock_356600564.jpg",
+      "nome": "Luna",
+      "raça": "Poodle",
+      "idade": "5 anos",
+      "sexo": "Fêmea",
+      "descrição": "Inteligente e afetuosa."
+    },
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
+      "nome": "Jack",
+      "raça": "Pastor Alemão",
+      "idade": "3 anos",
+      "sexo": "Macho",
+      "descrição": "Leal e protetor."
+    },
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_3716470301.jpg",
+      "nome": "Max",
+      "raça": "Labrador Retriever",
+      "idade": "3 anos",
+      "sexo": "Macho",
+      "descrição": "Amigável e cheio de energia."
+    },
+  ];

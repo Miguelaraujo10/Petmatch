@@ -139,6 +139,7 @@ body {
     background-color: #d0023a;
 }
 
+
 .footer {
     background-color: #D496A7;
     padding: 20px;
@@ -255,5 +256,18 @@ body {
         text-align: center;
         padding: 10px;
     }
+    
+        .pet-card .heart {
+            width: 30px;
+            height: 30px;
+        }
+    
+        .heart::before,
+        .heart::after {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
     
 }
