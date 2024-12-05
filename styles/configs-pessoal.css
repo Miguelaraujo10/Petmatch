@@ -1,11 +1,8 @@
-/* Container centralizado */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f5d0d7;
-    margin: 0;
+    width: 100%;
 }
 
 /* Card principal */
@@ -48,14 +45,12 @@
     margin-top: 5px;
 }
 
-/* Divisor */
 hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 20px 0;
 }
 
-/* Conteúdo do card */
 .card-content {
     text-align: left;
     font-size: 18px;
@@ -93,7 +88,6 @@ hr {
     text-decoration: underline;
 }
 
-/* Ícone de lápis */
 .edit-icon {
     font-size: 16px;
     color: #D496A7;
@@ -104,7 +98,6 @@ hr {
     color: #c38492;
 }
 
-/* Rodapé do card */
 .card-footer {
     margin-top: 30px;
 }

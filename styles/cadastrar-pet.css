@@ -1,230 +1,215 @@
-/* Definindo a fonte e o fundo da página */
-body {
-    font-family: 'Sora', sans-serif;
-    background-color: #f5d0d7; /* Cor de fundo suave */
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo na página */
-}
-
-/* Estilo do cabeçalho (header) */
-.header {
-    background-color: #d08b96;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    flex-wrap: wrap; /* Permite que o cabeçalho se ajuste em telas menores */
-}
-
-.logo-and-title {
-    display: flex;
-    align-items: center;
-    flex: 1;
-}
-
-.logo-and-title img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-.logo-and-title h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 600;
-}
-
-/* Estilo do botão de voltar */
-.back-button button {
-    background-color: #D496A7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.back-button button:hover {
-    background-color: #c38492;
-    transform: scale(1.05);
-}
-
-.back-button {
-    display: flex;
-    justify-content: flex-start;
-    margin: 20px;
-}
-
-/* Estilo da seção principal (formulário de cadastro) */
 .main {
-    flex: 1;
-    padding: 30px;
-    text-align: center;
-    background-color: white; /* Fundo branco para destacar o conteúdo */
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    margin: 20px auto; /* Centraliza o conteúdo na página */
+  position: relative;
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin: 20px auto;
 }
 
 .main h2 {
-    font-size: 28px;
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .main p {
-    color: #666;
-    font-size: 18px;
+  color: #666;
+  font-size: 18px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-label {
+  display: inline-block;
+  width: 99%;
+  padding: 10px 20px;
+  color: #333;
+  background-color: #f5d0d7;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: start;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-file-label:hover {
+  background-color: #c38492;
+  transform: scale(1.05);
+}
+
+.custom-file-label:active {
+  background-color: #b36f84;
 }
 
 /* Estilo do formulário */
-.form-group, .form-group-menor, .form-group-menor-idade {
-    margin: 30px;
+.form-group,
+.form-group-menor,
+.form-group-menor-idade {
+  margin: 30px;
 }
 
 .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
+  display: block;
+  font-weight: ;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.form-group input, .form-group select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    background-color: #f5d0d7;
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  background-color: #f5d0d7;
 }
 
 .form-group-menor-idade {
-    text-align: start;
-    width: 48%;
-    border-radius: 5px;
-    font-size: 16px;
+  text-align: start;
+  width: 48%;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .form-group-menor {
-    text-align: start;
-    width: 50%;
-    border-radius: 5px;
-    font-size: 16px;
+  text-align: start;
+  width: 50%;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-.form-group-menor label, .form-group-menor-idade label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
+.form-group-menor label,
+.form-group-menor-idade label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.form-group-menor input, .form-group-menor select, .form-group-menor-idade input, .form-group-menor-idade select {
-    width: 90%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    background-color: #f5d0d7;
+.form-group-menor input,
+.form-group-menor select,
+.form-group-menor-idade input,
+.form-group-menor-idade select {
+  width: 90%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f5d0d7;
 }
 
-/* Estilo do botão */
 button[type="submit"] {
-    background-color: #D496A7;
-    color: white;
-    padding: 15px 30px; /* Ajuste do tamanho do botão */
-    border: none;
-    border-radius: 25px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    width: 100%; /* Faz o botão ocupar toda a largura do retângulo */
-    max-width: 250px; /* Limita a largura do botão */
+  width: 250px;
+  background-color: #d496a7;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  position: absolute;
+  bottom: 140px;
+  right: 12%;
 }
 
 button[type="submit"]:hover {
-    background-color: #c38492;
-    transform: scale(1.05);
+  background-color: #c38492;
+  transform: scale(1.05);
 }
 
-/* Estilo do rodapé */
-.footer {
-    background-color: #D496A7;
+@media (max-width: 1200px) {
+  .main {
+    width: 80%;
     padding: 20px;
+  }
+
+  button[type="submit"] {
+    position: relative;
+    margin: 20px auto;
+    bottom: auto;
+    right: auto;
+    display: block;
+    width: 200px;
+    font-size: 16px;
+  }
+  .logo-and-title h1 {
+    font-size: 28px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
+  .back-button {
+    margin-top: 10px;
+  }
+  .custom-file-label {
+    padding: 10px 15px;
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
     text-align: center;
-    color: #555;
-    font-weight: 400;
-    margin-top: 90px;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 900px) {
-    .main {
-        width: 80%; /* Ajusta o formulário para maior largura em telas menores */
-        padding: 20px;
+    .form-group-menor {
+      text-align: start;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
     }
-
-    button[type="submit"] {
-        font-size: 16px;
-        padding: 12px;
-        width: 80%; /* Botão ocupa 80% da largura */
-    }
-
-    .logo-and-title h1 {
-        font-size: 28px;
-    }
-
-    .header {
-        padding: 15px;
-    }
-
-    .back-button {
-        margin-top: 10px;
-    }
+  }
 }
 
 @media (max-width: 600px) {
-    .main {
-        width: 90%; /* Formulário ocupa quase toda a largura da tela */
-        padding: 15px;
-    }
+  .main {
+    width: 90%;
+    padding: 15px;
+  }
 
-    button[type="submit"] {
-        font-size: 14px;
-        padding: 12px;
-        width: 90%; /* Botão ocupa 90% da largura */
-        margin-top: 20px;
-    }
+  button[type="submit"] {
+    width: 180px; /* Ajusta a largura do botão */
+    font-size: 14px; /* Texto menor para caber no botão */
+    padding: 12px; /* Ajusta o espaçamento interno */
+  }
 
-    .logo-and-title h1 {
-        font-size: 24px;
-    }
+  .logo-and-title h1 {
+    font-size: 24px;
+  }
 
-    .header {
-        flex-direction: column; /* Permite que os itens do cabeçalho fiquem em coluna */
-        align-items: center;
-        padding: 10px;
-    }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
 
-    .back-button {
-        justify-content: center;
-    }
+  .back-button {
+    justify-content: center;
+  }
 
-    /* Ajustes adicionais para os campos do formulário em telas muito pequenas */
-    .form-group, .form-group-menor, .form-group-menor-idade {
-        margin: 15px 0;
-    }
+  .form-group,
+  .form-group-menor,
+  .form-group-menor-idade {
+    margin: 15px 0;
+  }
 
-    .form-group input, .form-group select, .form-group-menor input, .form-group-menor select {
-        width: 90%;
-    }
+  .form-group input,
+  .form-group select,
+  .form-group-menor input,
+  .form-group-menor select {
+    width: 90%;
+  }
+  .custom-file-label {
+    padding: 8px 12px;
+    font-size: 12px;
+    width: 90%;
+    margin: 0 auto;
+  }
 }

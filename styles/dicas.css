@@ -1,29 +1,29 @@
 .main {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
+  flex: 1;
+  padding: 20px;
+  text-align: center;
 }
 
 .tip-section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .tip-section h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: left;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 .tip-section p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    text-align: left;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-.titulo{
-    font-size: 28px;
-    margin-bottom: 80px;
+.titulo {
+  font-size: 28px;
+  margin-bottom: 80px;
 }

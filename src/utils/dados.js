@@ -1,6 +1,6 @@
 const cachorros = [
     {
-      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_3716470301.jpg",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
       "nome": "Max",
       "raça": "Labrador Retriever",
       "idade": "3 anos",
