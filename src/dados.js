@@ -131,14 +131,16 @@ const cachorros = [
       "descrição": "Afetuosa e brincalhona."
     }
   ];
-  [
+
+ seusPets = [
+  
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_407968177.jpg",
       "nome": "Tucker",
       "raça": "Doberman",
       "idade": "5 anos",
       "sexo": "Macho",
-      "descrição": "Leal e vigilante."
+      "descrição": "Tucker é um cão leal e vigilante. Sempre atento, protege sua família com dedicação."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2019/06/shutterstock_498185995.jpg",
@@ -146,7 +148,7 @@ const cachorros = [
       "raça": "Pit Bull",
       "idade": "3 anos",
       "sexo": "Fêmea",
-      "descrição": "Amigável e cheia de energia."
+      "descrição": "Roxy é amigável e cheia de energia. Adora brincar e se dar bem com pessoas e outros animais."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/08/ra%C3%A7a-de-cachorro-basset.png",
@@ -154,8 +156,7 @@ const cachorros = [
       "raça": "Basset Hound",
       "idade": "4 anos",
       "sexo": "Macho",
-      "descrição": "Tranquilo e leal."
-    // biome-ignore lint/style/noCommaOperator: <explanation>
+      "descrição": "Bentley é tranquilo e leal, ideal para quem busca um companheiro calmo. Sempre disposto a relaxar ao seu lado."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2017/03/Galeria-Border-Collie-6.jpg",
@@ -163,7 +164,7 @@ const cachorros = [
       "raça": "Border Collie",
       "idade": "2 anos",
       "sexo": "Fêmea",
-      "descrição": "Inteligente e ágil."
+      "descrição": "Lily é extremamente inteligente e ágil. Adora aprender novos truques e se destacar em atividades."
     }
   ];
   
