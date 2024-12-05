@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match! - PetMatch</title>
+    <title>Formulário Adoção - PetMatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/match-action.css">
+
 </head>
 
 <body>
@@ -26,9 +27,9 @@
 
     <main class="main">
         <section class="match-intro">
-            <h2>Match!</h2>
-            <p class="desc">Preencha seus dados e o dono do Pet escolhido receberá uma notificação que vocês deram um
-                match!</p>
+            <h2>Adote um pet!</h2>
+            <p class="desc">Preencha seus dados e o dono do Pet receberá uma notificação informando do seu interesse em
+                adotar!</p>
         </section>
 
         <div class="content">
@@ -38,15 +39,15 @@
                 <form id="petForm">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" id="name" placeholder="Seu nome" value="João Paulo">
+                        <input type="text" id="name" placeholder="Seu nome" value="">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Seu email" value="joao@petmatch.com">
+                        <input type="email" id="email" placeholder="Seu email" value="">
                     </div>
                     <div class="form-group">
                         <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" placeholder="Seu telefone" value="+31 9876543210">
+                        <input type="tel" id="phone" placeholder="Seu telefone" value="">
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
@@ -63,7 +64,7 @@
     <script src="../src/utils/scriptCards.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            renderizarMatchAction();
+            renderizarAdoteAction();
         });
     </script>
 </body>

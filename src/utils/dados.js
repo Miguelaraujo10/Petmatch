@@ -205,3 +205,14 @@ const cachorros = [
       "descrição": "Zoey é conhecida por sua personalidade afetuosa e brincalhona. Sempre pronta para se divertir, ela encanta a todos com seu charme e energia contagiante."
     }
 ];
+
+const adoteAction = [
+  {
+    "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_399042127.jpg",
+    "nome": "Buddy",
+    "raça": "Beagle",
+    "idade": "2 anos",
+    "sexo": "Macho",
+    "descrição": "Buddy é um Beagle curioso e amigável, sempre disposto a explorar novos lugares. Sua energia contagiante e natureza carinhosa fazem dele o companheiro ideal para aventuras e momentos tranquilos."
+  },
+];
