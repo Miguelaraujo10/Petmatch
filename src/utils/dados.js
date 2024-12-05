@@ -194,3 +194,14 @@ const cachorros = [
       "descrição": "Amigável e cheio de energia."
     },
   ];
+
+  const matchAction = [
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/5.jpg",
+      "nome": "Zoey",
+      "raça": "Cocker Spaniel",
+      "idade": "3 anos",
+      "sexo": "Fêmea",
+      "descrição": "Zoey é conhecida por sua personalidade afetuosa e brincalhona. Sempre pronta para se divertir, ela encanta a todos com seu charme e energia contagiante."
+    }
+];

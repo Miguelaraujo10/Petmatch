@@ -12,7 +12,7 @@ body {
   background-color: #d08b96;
   padding: 10px;
   display: flex;
-  align-items: center;
+  align-items: start;
   color: white;
   margin-bottom: 10px;
 }
@@ -20,7 +20,7 @@ body {
 .logo-and-title {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1; /* Garante que o logo ocupe o máximo de espaço possível */
 }
 
 .logo img {
@@ -54,15 +54,11 @@ body {
 }
 
 main {
-  flex: 1;
+  flex: 1; /* Faz o main ocupar o espaço disponível */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-content {
-  text-align: center;
+  justify-content: center; /* Centraliza verticalmente o conteúdo do main */
+  align-items: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 .footer {
@@ -71,11 +67,4 @@ main {
   text-align: center;
   color: #555;
   font-weight: 400;
-  font-size: 14px;
-}
-
-@media (max-width: 600px) {
-  .footer {
-    font-size: 12px;
-  }
 }
