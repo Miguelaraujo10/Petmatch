@@ -8,17 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/cadastrar-pet.css">
+    <style>
+        .error {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+            margin-top: 5px;
+            display: block;
+        }
+
+        #file-name-display {
+            font-size: 0.875em;
+            color: #555;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="header">
         <div class="logo-and-title">
+            <a href="menu.html">
             <img src="../imgs/Design sem nome.svg" alt="Logo">
+            </a>
             <h1>PetMatch</h1>
-        </header>
-
-    </div>
+        </div>
+    </header>
 
     <div class="back-button">
         <button onclick="window.location.href='menu.html'">Voltar</button>
@@ -28,13 +48,15 @@
             <h2>Cadastrar Pet</h2>
             <p>Preencha os dados para cadastrar o seu pet.</p>
 
-            <form id="petForm">
+            <form id="petForm" novalidate>
                 <div class="form-group">
                     <label for="petImage">Imagem do Pet:</label>
                     <div class="custom-file-upload">
                         <label for="file-upload" class="custom-file-label">Escolher arquivo</label>
-                        <input id="file-upload" type="file">
+                        <input id="file-upload" type="file" required>
+                        <span id="file-name-display">Selecione um arquivo JPEG ou PNG</span>
                     </div>
+                    <span id="file-error" class="error-message"></span>
                 </div>
                 <div class="form-group">
                     <label for="petName">Nome:</label>
@@ -44,7 +66,7 @@
                     <label for="petRaca">Raça:</label>
                     <input type="text" id="racaPet" placeholder="Raça do seu pet" required>
                 </div>
-                <div class="form-group" id="descricao">
+                <div class="form-group">
                     <label for="petDescription">Descrição:</label>
                     <input type="text" id="descricao" placeholder="Adicione uma descrição sobre seu pet" required>
                 </div>
@@ -70,12 +92,10 @@
                             <option value="adocao">Adoção</option>
                         </select>
                     </div>
+                </div>
 
-                    <button type="submit" class="button">Cadastrar</button>
-
+                <button type="submit" class="button">Cadastrar</button>
             </form>
-
-            <p id="message"></p>
         </div>
     </div>
 
