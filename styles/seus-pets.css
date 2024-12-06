@@ -104,8 +104,8 @@
     .container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center; /* Centraliza os cards horizontalmente */
-        align-items: center; /* Centraliza os cards verticalmente */
+        justify-content: center; 
+        align-items: center; 
     }
 
     .pet-card {
@@ -185,15 +185,15 @@
     .pet-card .actions {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centraliza os botões no contêiner */
+        align-items: center; 
         gap: 10px;
-        width: 100%; /* O contêiner ocupa toda a largura do card */
+        width: 100%; 
         margin-top: 15px;
     }
     
     .pet-card .button,
     .pet-card .button-remove {
-        width: 80%; /* Largura fixa para os botões */
+        width: 80%; 
         font-size: 14px;
         text-align: center;
         padding: 10px;
