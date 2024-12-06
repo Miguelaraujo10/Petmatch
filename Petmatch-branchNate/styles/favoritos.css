@@ -1,0 +1,146 @@
+/* Seção principal */
+.main {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+/* Contêiner de cards */
+.pets-section {
+  display: flex;
+  flex-direction: column; /* Cards em coluna */
+  gap: 20px; /* Espaçamento entre os cards */
+  align-items: center; /* Centraliza os cards horizontalmente */
+  padding: 20px;
+}
+
+/* Estilo individual dos cards */
+.pet-card {
+  display: flex;
+  flex-direction: row; /* Alinha os itens horizontalmente */
+  justify-content: space-between; /* Espaça texto e botão */
+  align-items: center; /* Centraliza os itens verticalmente */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 1000%; /* Card ocupa quase toda a largura da tela */
+  max-width: 1200px; /* Largura máxima para telas grandes */
+  text-align: left; /* Alinha o texto à esquerda */
+  gap: 20px; /* Espaçamento entre imagem e texto */
+}
+
+/* Imagem */
+.pet-card img {
+  flex-shrink: 0; /* Garante que a imagem não encolha */
+  width: 250px;
+  height: 200px;
+  object-fit: cover; /* Ajusta a imagem ao espaço sem distorção */
+  border-radius: 10px;
+}
+
+/* Informações do pet */
+.pet-card .info {
+  flex-grow: 1; /* O texto ocupa o espaço restante */
+  display: flex;
+  flex-direction: column; /* Informações em coluna */
+  gap: 10px; /* Espaçamento entre as linhas de texto */
+  padding-left: 20px; /* Espaçamento entre texto e imagem */
+}
+
+.pet-card .info h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #000;
+}
+
+.pet-card .info p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+}
+
+/* Botão de remoção */
+.pet-card .button-remove {
+  background-color: #ff678f;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: flex-start; /* Posiciona o botão no topo do card */
+}
+
+.pet-card .button-remove:hover {
+  background-color: #d0023a;
+}
+
+/* Responsividade */
+
+/* Para telas médias */
+@media (max-width: 900px) {
+  .pet-card {
+      flex-wrap: wrap; /* Permite que o conteúdo quebre linha */
+      padding: 15px; /* Reduz o espaçamento interno */
+  }
+
+  .pet-card img {
+      width: 100%; /* Imagem ocupa toda a largura disponível */
+      height: auto; /* Ajusta altura proporcionalmente */
+      margin-bottom: 15px; /* Espaçamento inferior para a imagem */
+  }
+
+  .pet-card .info {
+      padding-left: 0; /* Remove o espaçamento lateral */
+      text-align: center; /* Centraliza o texto */
+  }
+
+  .pet-card .button-remove {
+      align-self: center; /* Centraliza o botão */
+      margin-top: 10px; /* Espaçamento do botão em relação ao texto */
+  }
+}
+
+/* Para telas pequenas */
+@media (max-width: 600px) {
+  .pets-section {
+      gap: 15px; /* Reduz o espaçamento entre os cards */
+  }
+
+  .pet-card {
+      flex-direction: column; /* Alinha os itens verticalmente */
+      width: 100%; /* Card ocupa toda a largura */
+      max-width: 100%; /* Remove largura máxima */
+      padding: 15px;
+  }
+
+  .pet-card img {
+      width: 100%; /* Imagem ocupa toda a largura */
+      height: auto; /* Ajusta altura proporcionalmente */
+  }
+
+  .pet-card .info h3 {
+      font-size: 20px;
+  }
+
+  .pet-card .info p {
+      font-size: 16px;
+  }
+
+  .pet-card .button-remove {
+      width: 80%; /* Botão ocupa 80% da largura */
+      font-size: 14px;
+      padding: 10px;
+      margin-top: 15px;
+  }
+}

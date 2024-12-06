@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos - PetMatch</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/favoritos.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../imgs/Design sem nome.svg" alt="Logo">
+        </div>
+        <h1>PetMatch</h1>
+    </header>
+
+    <div class="back-button">
+        <button onclick="window.history.back()">&#8592; Voltar</button>
+    </div>
+
+    <main class="main">
+        <h2>Pets Favoritos</h2>
+        <div class="pets-section" id="pets-section">
+            <div class="pet-card">
+                <img src="URL_DA_IMAGEM" alt="Nome do Pet">
+                <div class="info">
+                    <h3>Nome do Pet</h3>
+                    <p>Raça: Raça do Pet</p>
+                    <p>Descrição: Descrição do Pet</p>
+                    <p>Idade: X anos</p>
+                </div>
+                <button class="button-remove">Remover</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 PetMatch. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../src/utils/scriptCards.js"></script>
+    <script>
+        // Renderiza os favoritos ao carregar a página
+        document.addEventListener("DOMContentLoaded", renderizarFavoritos);
+    </script>
+</body>
+
+</html>

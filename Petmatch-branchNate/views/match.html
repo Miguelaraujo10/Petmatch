@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ache o Par Perfeito - PetMatch</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/match.css"> <!-- Novo CSS para match -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="menu.html">
+        <img src="../imgs/Design sem nome.svg" alt="Logo">
+      </a>
+    </div>
+    <h1>PetMatch</h1>
+  </header>
+
+  <div class="back-button">
+    <button onclick="window.history.back()">&#8592; Voltar</button>
+  </div>
+
+  <div class="main">
+    <h2>Encontre o Par Ideal para Seu Cão!</h2>
+    <p>Conecte-se com donos de outros cães para cruzamento. Nós o ajudamos a encontrar o par perfeito para o seu pet.</p>
+    <div class="pets-section" id="pets-section">
+      <!-- Os cards serão renderizados aqui -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p>&copy; 2024 PetMatch. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../src/utils/scriptCards.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderizarCachorrosMatch();
+    });
+  </script>
+</body>
+
+</html>

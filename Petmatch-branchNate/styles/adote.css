@@ -1,0 +1,215 @@
+/* Estilo principal */
+.main {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+}
+
+.main h2 {
+  font-size: 32px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.main p {
+  color: #666;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Botões de navegação */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between; /* Um botão em cada lado */
+  align-items: center;
+  margin: 20px 30px;
+}
+
+.navigation-buttons .back-button,
+.navigation-buttons .favorites-button {
+  background-color: #D496A7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navigation-buttons .back-button:hover,
+.navigation-buttons .favorites-button:hover {
+  background-color: #c38492;
+  transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+.navigation-buttons .favorites-button {
+  background-color: #D496A7; /* Cor verde para o botão "Favoritos" */
+}
+
+.navigation-buttons .favorites-button:hover {
+  background-color: #D496A7; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo dos cards */
+.pet-card {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  position: relative; /* Para posicionar a estrela no canto */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pet-card:hover {
+  transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona um efeito de sombra mais intenso */
+}
+
+.pet-card img {
+  width: 100%;
+  height: auto;
+  max-height: 275px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.pet-card h3 {
+  font-size: 24px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.pet-card p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.pet-card .button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #d496a7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 50%;
+}
+
+.pet-card .button:hover {
+  background-color: #c38492;
+  transform: scale(1.1); /* Aumenta o botão ao passar o mouse */
+}
+
+/* Botão de Favorito (Estrela) */
+.pet-card .favorite-button {
+  border: none;
+  background: #ccc; /* Fundo cinza claro */
+  font-size: 28px;
+  color: #666; /* Cor cinza escuro para a estrela */
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.pet-card .favorite-button.favorited {
+  background: #ffd700; /* Fundo amarelo */
+  color: #fff; /* Estrela branca */
+}
+
+.pet-card .favorite-button:hover {
+  color: #ffd700; /* Efeito ao passar o mouse */
+  transform: scale(1.2); /* Aumenta a estrela ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .pet-card {
+    width: calc(50% - 40px); /* Ajusta para dois cards por linha em telas médias */
+  }
+
+  .navigation-buttons {
+    flex-direction: column; /* Empilha os botões em telas menores */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navigation-buttons .back-button,
+  .navigation-buttons .favorites-button {
+    width: 70%; /* Ajusta o tamanho dos botões */
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .pet-card {
+    width: 45%;
+  }
+
+  .main h2 {
+    font-size: 24px;
+  }
+
+  .pet-card .button {
+    width: 80%; /* Ajusta o tamanho do botão em telas menores */
+  }
+}
+
+@media (max-width: 600px) {
+  .main h2 {
+    font-size: 18px;
+  }
+
+  .main p {
+    font-size: 16px;
+  }
+
+  .pet-card {
+    width: 100%; /* Em telas muito pequenas, ocupa a largura total */
+    margin: 10px 0;
+  }
+
+  .pet-card img {
+    max-height: 220px; /* Reduz o tamanho da imagem para telas menores */
+  }
+
+  .pet-card .button {
+    width: 70%; /* Ajusta o tamanho do botão */
+    font-size: 16px;
+  }
+
+  .favorite-button {
+    font-size: 24px; /* Ajusta o tamanho da estrela */
+  }
+}
+
+@media (max-width: 400px) {
+  .main p {
+    font-size: 14px; /* Reduz o texto em telas muito pequenas */
+  }
+
+  .back-button button {
+    width: 25%;
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 40px; /* Ajusta o tamanho da logo */
+  }
+}
