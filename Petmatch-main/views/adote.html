@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adote um Pet - PetMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/adote.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../imgs/Design sem nome.svg" alt="Logo">
+        </div>
+        <h1>PetMatch</h1>
+    </header>
+
+    <div class="action-buttons">
+        <button class="back-button" onclick="window.location.href='menu.html'">Voltar</button>
+        <button class="favorite-page-button" onclick="window.location.href='favoritos.html'">Favoritos</button>
+    </div>
+
+    <main class="main">
+        <h2>Adote seu Novo Melhor Amigo!</h2>
+        <p>Aqui você encontra cães adoráveis esperando por uma família. Cada um tem uma história e está ansioso para
+            trazer alegria ao seu lar. <br>Escolha o seu novo companheiro e transforme a vida dele com amor e cuidado!
+        </p>
+        <div class="pets-section" id="pets-section">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 PetMatch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../src/utils/dados.js"></script>
+    <script src="../src/utils/scriptCards.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderizarCachorros();
+        });
+    </script>
+</body>
+
+</html>
