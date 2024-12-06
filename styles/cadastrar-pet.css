@@ -156,8 +156,8 @@ button[type="submit"]:hover {
   }
   .custom-file-label {
     padding: 10px 15px;
-    font-size: 14px; /* Reduz o tamanho da fonte */
-    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    font-size: 14px; 
+    width: 100%; 
     text-align: center;
     .form-group-menor {
       text-align: start;
@@ -175,9 +175,9 @@ button[type="submit"]:hover {
   }
 
   button[type="submit"] {
-    width: 180px; /* Ajusta a largura do botão */
-    font-size: 14px; /* Texto menor para caber no botão */
-    padding: 12px; /* Ajusta o espaçamento interno */
+    width: 180px; 
+    font-size: 14px; 
+    padding: 12px; 
   }
 
   .logo-and-title h1 {
@@ -212,4 +212,19 @@ button[type="submit"]:hover {
     width: 90%;
     margin: 0 auto;
   }
+}
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%; 
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 0.75em; 
+  color: rgba(0, 0, 0, 0.5); 
+  pointer-events: none; 
 }
