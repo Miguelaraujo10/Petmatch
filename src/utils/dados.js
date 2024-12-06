@@ -1,6 +1,6 @@
-[
+const cachorros = [
     {
-      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_3716470301.jpg",
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg",
       "nome": "Max",
       "raça": "Labrador Retriever",
       "idade": "3 anos",
@@ -62,7 +62,10 @@
       "idade": "1 ano",
       "sexo": "Fêmea",
       "descrição": "Pequena e enérgica."
-    },
+    }
+  ];
+
+  const cachorrosMatch = [
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
       "nome": "Jack",
@@ -126,14 +129,18 @@
       "idade": "3 anos",
       "sexo": "Fêmea",
       "descrição": "Afetuosa e brincalhona."
-    },
+    }
+  ];
+
+ const seusPets = [
+  
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_407968177.jpg",
       "nome": "Tucker",
       "raça": "Doberman",
       "idade": "5 anos",
       "sexo": "Macho",
-      "descrição": "Leal e vigilante."
+      "descrição": "Tucker é um cão leal e vigilante. Sempre atento, protege sua família com dedicação."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2019/06/shutterstock_498185995.jpg",
@@ -141,7 +148,7 @@
       "raça": "Pit Bull",
       "idade": "3 anos",
       "sexo": "Fêmea",
-      "descrição": "Amigável e cheia de energia."
+      "descrição": "Roxy é amigável e cheia de energia. Adora brincar e se dar bem com pessoas e outros animais."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2018/08/ra%C3%A7a-de-cachorro-basset.png",
@@ -149,7 +156,7 @@
       "raça": "Basset Hound",
       "idade": "4 anos",
       "sexo": "Macho",
-      "descrição": "Tranquilo e leal."
+      "descrição": "Bentley é tranquilo e leal, ideal para quem busca um companheiro calmo. Sempre disposto a relaxar ao seu lado."
     },
     {
       "foto": "https://love.doghero.com.br/wp-content/uploads/2017/03/Galeria-Border-Collie-6.jpg",
@@ -157,7 +164,55 @@
       "raça": "Border Collie",
       "idade": "2 anos",
       "sexo": "Fêmea",
-      "descrição": "Inteligente e ágil."
+      "descrição": "Lily é extremamente inteligente e ágil. Adora aprender novos truques e se destacar em atividades."
     }
-  ]
+  ];
   
+  const petsFavoritos = [
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2016/10/shutterstock_356600564.jpg",
+      "nome": "Luna",
+      "raça": "Poodle",
+      "idade": "5 anos",
+      "sexo": "Fêmea",
+      "descrição": "Inteligente e afetuosa."
+    },
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_274194038.jpg",
+      "nome": "Jack",
+      "raça": "Pastor Alemão",
+      "idade": "3 anos",
+      "sexo": "Macho",
+      "descrição": "Leal e protetor."
+    },
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_3716470301.jpg",
+      "nome": "Max",
+      "raça": "Labrador Retriever",
+      "idade": "3 anos",
+      "sexo": "Macho",
+      "descrição": "Amigável e cheio de energia."
+    },
+  ];
+
+  const matchAction = [
+    {
+      "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/5.jpg",
+      "nome": "Zoey",
+      "raça": "Cocker Spaniel",
+      "idade": "3 anos",
+      "sexo": "Fêmea",
+      "descrição": "Zoey é conhecida por sua personalidade afetuosa e brincalhona. Sempre pronta para se divertir, ela encanta a todos com seu charme e energia contagiante."
+    }
+];
+
+const adoteAction = [
+  {
+    "foto": "https://love.doghero.com.br/wp-content/uploads/2018/03/shutterstock_399042127.jpg",
+    "nome": "Buddy",
+    "raça": "Beagle",
+    "idade": "2 anos",
+    "sexo": "Macho",
+    "descrição": "Buddy é um Beagle curioso e amigável, sempre disposto a explorar novos lugares. Sua energia contagiante e natureza carinhosa fazem dele o companheiro ideal para aventuras e momentos tranquilos."
+  },
+];

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetMatch - Cachorros para Adoção</title>
+    <title>Meus Pets - PetMatch </title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/seus-pets.css">
 </head>
+
 <body>
-    <div class="header">
+    <header class="header">
         <div class="logo">
             <img src="../imgs/Design sem nome.svg" alt="Logo">
         </div>
         <h1>PetMatch</h1>
-    </div>
+    </header>
 
     <div class="back-button">
         <button onclick="window.history.back()">&#8592; Voltar</button>
     </div>
 
     <div class="main">
-        <h2>Adote um Cachorro</h2>
-        <p>Escolha o seu novo amigo canino e dê a ele um novo lar!</p>
+        <h2>Meus Pets</h2>
         <div class="pets-section" id="pets-section">
         </div>
     </div>
@@ -31,11 +33,11 @@
             <p>&copy; 2024 PetMatch. All rights reserved.</p>
         </div>
     </footer>
-    <script src="../src/dados.js"></script>
-    <script src="../src/script.js"></script>
+    <script src="../src/utils/dados.js"></script>
+    <script src="../src/utils/scriptCards.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            renderizarCachorros();
+            renderizarSeusPets();
         });
     </script>
 </body>

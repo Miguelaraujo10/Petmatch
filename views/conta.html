@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetMatch</title>
+    <title>Menu - PetMatch</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="..//styles/global.css">
+    <link rel="stylesheet" href="..//styles/menu.css">
 </head>
+
 <body>
 
-    <div class="header">
+    <header class="header">
         <div class="logo-and-title">
             <img src="../imgs/Design sem nome.svg" alt="Logo">
             <h1>PetMatch</h1>
@@ -27,15 +30,14 @@
             <!-- Botão de logout, inicialmente escondido -->
             <button id="logoutButton" class="logout-btn" style="display: none;">Sair da conta</button>
         </div>
-    </div>
+    </header>
 
     <div class="main">
-        <h2>Adote e Cuide</h2>
+        <h2>PetMatch</h2>
         <p>Conectando pessoas e animais, buscando seu parceiro ideal.</p>
         <div class="buttons">
-            <a href="#" class="button">Adote</a>
-            <a href="love.html" class="button">Forme um Casal</a>
-            <a href="cadastrar.html" class="button">Cadastrar PET</a>
+            <a href="configs-pessoais.html" class="button">Configurações pessoais</a>
+            <a href="configs-conta.html" class="button">Configurações de conta</a>
         </div>
 
     </div>
@@ -46,9 +48,9 @@
         </div>
     </footer>
 
-    <script src="../src/logout.js"></script>
+    <script src="../src/auth/logout.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const isLoggedIn = localStorage.getItem("isLoggedIn");
 
             // Verifica se o usuário está logado
@@ -66,4 +68,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -18,7 +18,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         document.getElementById("loginMessage").style.color = "green";
 
         // Redireciona para a página index.html após 2 segundos
-        setTimeout(function() {
+        // biome-ignore lint/complexity/useArrowFunction: <explanation>
+                setTimeout(function() {
             window.location.href = "index.html";
         }, 2000);
     } else {
