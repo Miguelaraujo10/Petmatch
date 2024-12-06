@@ -20,7 +20,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         // Redireciona para a página index.html após 2 segundos
         // biome-ignore lint/complexity/useArrowFunction: <explanation>
                 setTimeout(function() {
-            window.location.href = "index.html";
+            window.location.href = "menu.html";
         }, 2000);
     } else {
         document.getElementById("loginMessage").innerText = "Usuário ou senha incorretos.";

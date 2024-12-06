@@ -18,13 +18,16 @@
             <h1>PetMatch</h1>
         </div>
         <div class="login-section" id="loginSection">
+            <!-- Link de login redirecionando para signup.html -->
             <a href="./signup.html" class="login-link" id="loginLink">
                 <img src="../imgs/icone Login.svg" alt="Login" id="loginIcon">
                 <span id="loginText">Sign-in/Login</span>
             </a>
-            <a href="configs-conta.html" id="userProfile" class="user-profile" style="display: none;">
-                <img src="../imgs/icone Login.svg" alt="User Icon" id="profilePicHeader">
+            <!-- Botão de perfil para conta.html, exibido apenas se o usuário estiver logado -->
+            <a href="conta.html" id="userProfile" class="user-profile" style="display: none;">
+                <img src="../imgs/icone Login.svg" alt="User Icon">
             </a>
+            <!-- Botão de logout, inicialmente escondido -->
             <button id="logoutButton" class="logout-btn" style="display: none;">Sair da conta</button>
         </div>
     </header>
@@ -33,10 +36,8 @@
         <h2>PetMatch</h2>
         <p>Conectando pessoas e animais, buscando seu parceiro ideal.</p>
         <div class="buttons">
-            <a href="adote.html" class="button">Adote</a>
-            <a href="match.html" class="button">Forme um Casal</a>
-            <a href="cadastrar-pet.html" class="button">Cadastrar PET</a>
-            <a href="dicas.html" class="button">Dicas</a>
+            <a href="configs-pessoais.html" class="button">Configurações pessoais</a>
+            <a href="configs-conta.html" class="button">Configurações de conta</a>
         </div>
 
     </div>
@@ -48,7 +49,6 @@
     </footer>
 
     <script src="../src/auth/logout.js"></script>
-    <script src="../src/utils/personalInfo.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const isLoggedIn = localStorage.getItem("isLoggedIn");

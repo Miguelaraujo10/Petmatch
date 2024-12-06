@@ -38,15 +38,15 @@
                 <form id="petForm">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" id="name" placeholder="Seu nome" value="João Paulo">
+                        <input type="text" id="name" >
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Seu email" value="joao@petmatch.com">
+                        <input type="email" id="email" >
                     </div>
                     <div class="form-group">
                         <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" placeholder="Seu telefone" value="+31 9876543210">
+                        <input type="tel" id="phone">
                     </div>
                     <button type="submit">Enviar</button>
                 </form>
@@ -61,6 +61,7 @@
 
     <script src="../src/utils/dados.js"></script>
     <script src="../src/utils/scriptCards.js"></script>
+    <script src="../src/utils/adoptionFormHandler.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             renderizarMatchAction();
