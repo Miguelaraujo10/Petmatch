@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match! - PetMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/match-action.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="menu.html" aria-label="Voltar ao menu principal">
+                <img src="../imgs/Design sem nome.svg" alt="Logo do PetMatch">
+            </a>
+        </div>
+        <h1>PetMatch</h1>
+    </header>
+
+    <div class="back-button">
+        <button onclick="window.history.back()" aria-label="Voltar para a página anterior">&#8592; Voltar</button>
+    </div>
+
+    <main class="main">
+        <section class="match-intro">
+            <h2>Match!</h2>
+            <p class="desc">Preencha seus dados e o dono do Pet escolhido receberá uma notificação que vocês deram um
+                match!</p>
+        </section>
+
+        <div class="content">
+            <section class="pets-section" id="pets-section" aria-label="Lista de pets disponíveis para match">
+            </section>
+            <div class="form-container">
+                <form id="petForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome" value="João Paulo">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Seu email" value="joao@petmatch.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" placeholder="Seu telefone" value="+31 9876543210">
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <p>&copy; 2024 PetMatch. All rights reserved.</p>
+    </footer>
+
+    <script src="../src/utils/dados.js"></script>
+    <script src="../src/utils/scriptCards.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderizarMatchAction();
+        });
+    </script>
+</body>
+
+</html>

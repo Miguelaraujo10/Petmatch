@@ -1,0 +1,44 @@
+.main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tip-section {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.tip-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: start;
+}
+
+.tip-section .lado {
+  text-align: end;
+}
+.tip-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo {
+  font-size: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
