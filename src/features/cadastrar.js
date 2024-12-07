@@ -66,12 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Configurar os contadores de caracteres para os campos do formulário
   setupCharacterCounter("petName", maxNameLength);
   setupCharacterCounter("racaPet", maxRaceLength);
   setupCharacterCounter("descricao", maxDescriptionLength);
 
-  // Lógica de validação e envio do formulário
   petForm.addEventListener("submit", function (event) {
     event.preventDefault();
     let formIsValid = true;
@@ -105,6 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       { id: "petAge", message: "Por favor, preencha a idade do pet." },
       { id: "petType", message: "Por favor, selecione o sexo do pet." },
+      {
+        id: "petFinalidade",
+        message: "Por favor, selecione a finalidade do cadastro.",
+      },
     ];
 
     fields.forEach((field) => {
@@ -156,14 +158,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const petDescription = document.getElementById("descricao").value.trim();
       const petAge = document.getElementById("petAge").value.trim();
       const petType = document.getElementById("petType").value.trim();
+      const petFinalidade = document
+        .getElementById("petFinalidade")
+        .value.trim(); // Finalidade
 
       const newPet = {
-        id: Date.now().toString(), // ID único para o pet
+        id: Date.now().toString(), // ID único
         name: petName,
         race: petRaca,
         description: petDescription,
         age: petAge,
         type: petType,
+        purpose: petFinalidade, // Finalidade
         image: base64Image,
       };
 
@@ -172,9 +178,9 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("pets", JSON.stringify(pets));
 
       alert("Pet cadastrado com sucesso!");
-      window.location.reload(); // Recarrega a página para exibir o novo pet
+      window.location.href = "meus-pets.html"; // Redireciona para a página dos pets cadastrados
     };
 
-    reader.readAsDataURL(file);
+    reader.readAsDataURL(file); // Lê a imagem do arquivo
   });
 });
