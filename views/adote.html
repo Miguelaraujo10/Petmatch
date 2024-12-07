@@ -46,61 +46,115 @@
       </div>
     </main>
 
-    <footer>
-      <p>&copy; 2024 PetMatch. All rights reserved.</p>
-    </footer>
-
     <script>
-      const fixedPets = [
-        {
-          id: "1",
-          name: "Bolinha",
-          race: "Labrador",
-          age: "2 anos",
-          description: "Adorável e amigável.",
-          image: "../imgs/bolinha.jpg",
-        },
-        {
-          id: "4",
-          name: "Luna",
-          race: "Shih Tzu",
-          age: "3 anos",
-          description: "Pequena e charmosa.",
-          image: "../imgs/LUNA.jpg",
-        },
-      ];
+      document.addEventListener("DOMContentLoaded", () => {
+        const petsSection = document.getElementById("pets-section");
 
-      function savePetToLocalStorage(pet) {
-        const existingPets = JSON.parse(localStorage.getItem("pets")) || [];
-        localStorage.setItem("pets", JSON.stringify([...existingPets, pet]));
-      }
+        const fixedPets = [
+          {
+            id: "1",
+            name: "Bolinha",
+            race: "Labrador",
+            age: "2 anos",
+            description: "Adorável e amigável.",
+            image: "../imgs/bolinha.jpg",
+          },
+          {
+            id: "4",
+            name: "Luna",
+            race: "Shih Tzu",
+            age: "3 anos",
+            description: "Pequena e charmosa.",
+            image: "../imgs/LUNA.jpg",
+          },
+        ];
 
-      function loadAndRenderPets() {
-        const container = document.getElementById("pets-section");
         const dynamicPets = JSON.parse(localStorage.getItem("pets")) || [];
         const allPets = [...fixedPets, ...dynamicPets];
 
-        container.innerHTML = "";
+        petsSection.innerHTML = "";
 
         allPets.forEach((pet) => {
-          const petCard = `
-            <div class="pet-card">
-              <img src="${pet.image}" alt="${pet.name}">
-              <div class="card-content">
-                <h3>${pet.name}</h3>
-                <p><strong>Raça:</strong> ${pet.race}</p>
-                <p><strong>Descrição:</strong> ${pet.description}</p>
-                <p><strong>Idade:</strong> ${pet.age}</p>
-              </div>
-              <div class="card-actions">
-                <a href="adote-action.html?petId=${pet.id}" class="button">Adote</a>
-              </div>
-            </div>`;
-          container.innerHTML += petCard;
-        });
-      }
+          const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+          const isFavorito = favoritos.some((fav) => fav.image === pet.image);
 
-      document.addEventListener("DOMContentLoaded", loadAndRenderPets);
+          const petCard = document.createElement("div");
+          petCard.className = "pet-card";
+          petCard.innerHTML = `
+            <img src="${pet.image}" alt="${pet.name}">
+            <div class="card-content">
+              <h3>${pet.name}</h3>
+              <p><strong>Raça:</strong> ${pet.race}</p>
+              <p><strong>Descrição:</strong> ${pet.description}</p>
+              <p><strong>Idade:</strong> ${pet.age}</p>
+            </div>
+            <div class="card-actions">
+              <button class="favorite-button ${
+                isFavorito ? "favorited" : ""
+              }" onclick="toggleFavorito('${pet.image}', this)">
+                &#9733;
+              </button>
+              <a href="adote-action.html?petId=${
+                pet.id
+              }" class="button">Adote</a>
+            </div>
+          `;
+
+          petsSection.appendChild(petCard);
+        });
+      });
+
+      const toggleFavorito = (petImage, button) => {
+        const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+        const fixedPets = [
+          {
+            id: "1",
+            name: "Bolinha",
+            race: "Labrador",
+            age: "2 anos",
+            description: "Adorável e amigável.",
+            image: "../imgs/bolinha.jpg",
+          },
+          {
+            id: "4",
+            name: "Luna",
+            race: "Shih Tzu",
+            age: "3 anos",
+            description: "Pequena e charmosa.",
+            image: "../imgs/LUNA.jpg",
+          },
+        ];
+        const dynamicPets = JSON.parse(localStorage.getItem("pets")) || [];
+        const allPets = [...fixedPets, ...dynamicPets];
+        const pet = allPets.find((p) => p.image === petImage);
+
+        if (!pet) {
+          alert("Erro ao localizar o pet.");
+          return;
+        }
+
+        const petIndex = favoritos.findIndex((fav) => fav.image === pet.image);
+
+        if (petIndex === -1) {
+          favoritos.push(pet);
+          button.classList.add("favorited");
+          alert(`${pet.name} foi adicionado aos favoritos!`);
+        } else {
+          favoritos.splice(petIndex, 1);
+          button.classList.remove("favorited");
+          alert(`${pet.name} foi removido dos favoritos!`);
+        }
+
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+      };
+
+      window.toggleFavorito = toggleFavorito;
     </script>
   </body>
+
+  <footer>
+    <div class="footer">
+      <p>&copy; 2024 PetMatch. All rights reserved.</p>
+    </div>
+  </footer>
 </html>
