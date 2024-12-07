@@ -94,12 +94,49 @@
               <p><strong>Idade:</strong> ${pet.age}</p>
             </div>
             <div class="card-actions">
+              <!-- Estrela para favoritar -->
+              <button class="favorite-button" onclick="toggleFavorito('${pet.id}', this)">
+                &#9733;
+              </button>
               <a href="adote-action.html?petId=${pet.id}" class="button">Adote</a>
             </div>
           `;
           petsSection.appendChild(petCard);
         });
       });
+
+      // Função para adicionar/remover favoritos
+      function toggleFavorito(petId, button) {
+        const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+        const allPets = JSON.parse(localStorage.getItem("pets")) || []; // Pets dinâmicos
+        const fixedPets = [
+          { id: "1", name: "Bolinha" },
+          { id: "4", name: "Luna" },
+        ]; // Pets fixos
+        const petList = [...fixedPets, ...allPets]; // Combina pets fixos e dinâmicos
+        const pet = petList.find((p) => p.id === petId); // Encontra o pet com base no id
+
+        if (!pet) {
+          alert("Erro ao localizar o pet.");
+          return;
+        }
+
+        const petIndex = favoritos.findIndex((fav) => fav.id === pet.id);
+
+        if (petIndex === -1) {
+          favoritos.push(pet);
+          button.classList.add("favorited");
+          alert(`${pet.name} foi adicionado aos favoritos!`);
+        } else {
+          favoritos.splice(petIndex, 1);
+          button.classList.remove("favorited");
+          alert(`${pet.name} foi removido dos favoritos!`);
+        }
+
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+      }
+
+      window.toggleFavorito = toggleFavorito;
     </script>
   </body>
 
