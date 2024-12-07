@@ -75,7 +75,6 @@
       function renderSelectedPet() {
         const petId = getQueryParam("petId");
 
-        // Reutilizando os pets fixos
         const fixedPets = [
           {
             id: "1",
@@ -95,11 +94,9 @@
           },
         ];
 
-        // Recuperando pets gerados do localStorage
         const dynamicPets = JSON.parse(localStorage.getItem("pets")) || [];
         const allPets = [...fixedPets, ...dynamicPets];
 
-        // Buscando o pet correspondente pelo ID
         const selectedPet = allPets.find((pet) => pet.id === petId);
         const container = document.getElementById("pets-section");
 
@@ -119,7 +116,29 @@
         }
       }
 
-      document.addEventListener("DOMContentLoaded", renderSelectedPet);
+      function handleFormSubmit(event) {
+        event.preventDefault();
+
+        // Obtem os valores dos campos do formulário
+        const email = document.getElementById("email").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        // Exibe o popup
+        alert(
+          `Obrigado, ${name}!\n\nAs informações sobre o animal foram enviadas para o email: ${email}.\n\nTelefone de contato: ${phone}.`
+        );
+
+        // Opcional: Redirecionar para outra página ou limpar o formulário
+        window.location.href = "menu.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        renderSelectedPet();
+
+        const petForm = document.getElementById("petForm");
+        petForm.addEventListener("submit", handleFormSubmit);
+      });
     </script>
   </body>
 </html>
