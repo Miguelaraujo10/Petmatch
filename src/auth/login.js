@@ -17,11 +17,11 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         document.getElementById("loginMessage").innerText = "Login aprovado!";
         document.getElementById("loginMessage").style.color = "green";
 
-        // Redireciona para a página index.html após 2 segundos
+        // Redireciona para a página menu.html após 2 segundos
         // biome-ignore lint/complexity/useArrowFunction: <explanation>
                 setTimeout(function() {
             window.location.href = "menu.html";
-        }, 2000);
+        }, 1000);
     } else {
         document.getElementById("loginMessage").innerText = "Usuário ou senha incorretos.";
         document.getElementById("loginMessage").style.color = "red";
