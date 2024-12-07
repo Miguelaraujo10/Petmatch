@@ -26,7 +26,7 @@ h1 {
     align-items: center;
     justify-content: flex-start;
     padding-top: 5px;
-    margin-bottom: auto; /* Garante que o conteúdo suba */
+    margin-bottom: auto; 
 }
 
 h2 {
