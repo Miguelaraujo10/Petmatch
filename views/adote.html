@@ -1,101 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adote um Pet - PetMatch</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/adote.css">
-    
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/adote.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="logo">
-            <a href="menu.html">
-                <img src="../imgs/Design sem nome.svg" alt="Logo">
-            </a>
-        </div>
-        <h1>PetMatch</h1>
+      <div class="logo">
+        <a href="menu.html">
+          <img src="../imgs/Design sem nome.svg" alt="Logo" />
+        </a>
+      </div>
+      <h1>PetMatch</h1>
     </header>
 
     <div class="action-buttons">
-        <button class="back-button" onclick="window.location.href='menu.html'">Voltar</button>
-        <button class="favorite-page-button" onclick="window.location.href='favoritos.html'">Favoritos</button>
+      <button class="back-button" onclick="window.location.href='menu.html'">
+        Voltar
+      </button>
+      <button
+        class="favorite-page-button"
+        onclick="window.location.href='favoritos.html'"
+      >
+        Favoritos
+      </button>
     </div>
 
     <main class="main">
-        <h2>Adote seu Novo Melhor Amigo!</h2>
-        <p>Aqui você encontra cães adoráveis esperando por uma família. Cada um tem uma história e está ansioso para trazer alegria ao seu lar.</p>
-        
-        <!-- Seção de Pets -->
-        <div class="pets-section" id="pets-section"> 
-            <!-- Modelos Pré-Existentes -->
-            <div class="pet-card">
-                <img src="../imgs/pet1.jpg" alt="Pet 1">
-                <div class="card-content">
-                    <h3>Bolinha</h3>
-                    <p>Raça: Labrador</p>
-                    <p>Descrição: Adorável e amigável.</p>
-                    <p>Idade: 2 anos</p>
-                </div>
-                <div class="card-actions">
-                    <button class="favorite-button">&#9733;</button>
-                    <a href="#" class="button">Adote</a>
-                </div>
-            </div>
-            <div class="pet-card">
-                <img src="../imgs/pet2.jpg" alt="Pet 2">
-                <div class="card-content">
-                    <h3>Rex</h3>
-                    <p>Raça: Pastor Alemão</p>
-                    <p>Descrição: Leal e protetor.</p>
-                    <p>Idade: 4 anos</p>
-                </div>
-                <div class="card-actions">
-                    <button class="favorite-button">&#9733;</button>
-                    <a href="#" class="button">Adote</a>
-                </div>
-            </div>
-            <div class="pet-card">
-                <img src="../imgs/pet3.jpg" alt="Pet 3">
-                <div class="card-content">
-                    <h3>Fiona</h3>
-                    <p>Raça: Golden Retriever</p>
-                    <p>Descrição: Brincalhona e carinhosa.</p>
-                    <p>Idade: 1 ano</p>
-                </div>
-                <div class="card-actions">
-                    <button class="favorite-button">&#9733;</button>
-                    <a href="#" class="button">Adote</a>
-                </div>
-            </div>
-            <div class="pet-card">
-                <img src="../imgs/pet4.jpg" alt="Pet 4">
-                <div class="card-content">
-                    <h3>Luna</h3>
-                    <p>Raça: Shih Tzu</p>
-                    <p>Descrição: Pequena e charmosa.</p>
-                    <p>Idade: 3 anos</p>
-                </div>
-                <div class="card-actions">
-                    <button class="favorite-button">&#9733;</button>
-                    <a href="#" class="button">Adote</a>
-                </div>
-            </div>
-        </div>
+      <h2>Adote seu Novo Melhor Amigo!</h2>
+      <p>
+        Aqui você encontra cães adoráveis esperando por uma família. Cada um tem
+        uma história e está ansioso para trazer alegria ao seu lar.
+      </p>
+
+      <div class="pets-section" id="pets-section">
+        <!-- Lista de Animais será gerada dinamicamente -->
+      </div>
     </main>
 
     <footer>
-        <div class="footer">
-            <p>&copy; 2024 PetMatch. All rights reserved.</p>
-        </div>
+      <p>&copy; 2024 PetMatch. All rights reserved.</p>
     </footer>
-    <script src="../src/utils/dados.js"></script>
-    <script src="../src/utils/adocao.js"></script>
-    <script src="/src/features/adote.js"></script>
-</body>
 
+    <script>
+      const fixedPets = [
+        {
+          id: "1",
+          name: "Bolinha",
+          race: "Labrador",
+          age: "2 anos",
+          description: "Adorável e amigável.",
+          image: "../imgs/bolinha.jpg",
+        },
+        {
+          id: "4",
+          name: "Luna",
+          race: "Shih Tzu",
+          age: "3 anos",
+          description: "Pequena e charmosa.",
+          image: "../imgs/LUNA.jpg",
+        },
+      ];
+
+      function savePetToLocalStorage(pet) {
+        const existingPets = JSON.parse(localStorage.getItem("pets")) || [];
+        localStorage.setItem("pets", JSON.stringify([...existingPets, pet]));
+      }
+
+      function loadAndRenderPets() {
+        const container = document.getElementById("pets-section");
+        const dynamicPets = JSON.parse(localStorage.getItem("pets")) || [];
+        const allPets = [...fixedPets, ...dynamicPets];
+
+        container.innerHTML = "";
+
+        allPets.forEach((pet) => {
+          const petCard = `
+            <div class="pet-card">
+              <img src="${pet.image}" alt="${pet.name}">
+              <div class="card-content">
+                <h3>${pet.name}</h3>
+                <p><strong>Raça:</strong> ${pet.race}</p>
+                <p><strong>Descrição:</strong> ${pet.description}</p>
+                <p><strong>Idade:</strong> ${pet.age}</p>
+              </div>
+              <div class="card-actions">
+                <a href="adote-action.html?petId=${pet.id}" class="button">Adote</a>
+              </div>
+            </div>`;
+          container.innerHTML += petCard;
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", loadAndRenderPets);
+    </script>
+  </body>
 </html>
