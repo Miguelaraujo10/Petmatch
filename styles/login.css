@@ -80,3 +80,21 @@
     font-size: 12px;
   }
 }
+
+.forgot-password-link {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.forgot-password-link a {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link a:hover {
+  color: #000000;
+  text-decoration: underline;
+}

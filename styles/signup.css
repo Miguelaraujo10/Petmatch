@@ -15,7 +15,7 @@
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduz o espaçamento entre inputs */
 }
 
 .input-group input {
@@ -37,14 +37,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 0px; /* Reduz o espaço entre os botões */
 }
 
-#signupMessage {
-  color: red;
-  font-size: 16px;
-  text-align: center;
-  min-height: 20px; /* Define uma altura mínima para evitar deslocamento */
-  margin-top: 10px;
+.already-have-account {
+  margin-top: 10px; /* Aproxima o botão "Já possui uma conta?" do botão "Criar Conta" */
+  font-weight: 00;
+  border: px;
 }
 
 .signup-btn {
@@ -55,29 +54,12 @@
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin-bottom: 10px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .signup-btn:hover {
   background-color: #c38492;
   transform: scale(1.05); /* Pequeno efeito de aumento ao passar o mouse */
-}
-
-.already-account {
-  font-size: 16px;
-  color: #666;
-}
-
-.login-link {
-  color: #d496a7;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.login-link:hover {
-  color: #c38492; /* Efeito hover no link de login */
 }
 
 .message {
@@ -92,11 +74,10 @@
   }
 }
 
-@media (max-width: 900px) {
-}
 .footer {
   font-size: 12px;
 }
+
 @media (max-width: 600px) {
   .footer {
     font-size: 10px;
